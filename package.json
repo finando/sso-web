@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "run-s start:webpack",
-    "start:webpack": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack serve --config webpack/dev.config.ts",
+    "start:webpack": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack serve --config webpack/dev.config.ts",
     "build:dev": "run-s build:webpack:dev",
     "build:prod": "run-s build:webpack:prod",
     "build:webpack:dev": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack --config webpack/dev.config.ts",
@@ -71,7 +71,7 @@
     "@typescript-eslint/eslint-plugin": "^5.59.9",
     "@typescript-eslint/parser": "^5.59.9",
     "babel-loader": "^9.1.2",
-    "babel-plugin-styled-components": "^2.1.3",
+    "babel-plugin-styled-components": "^2.1.4",
     "commitizen": "^4.3.0",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
