@@ -1,6 +1,7 @@
 # Finando | SSO Web
 
 [![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![GitHub Actions](https://github.com/finando/sso-web/actions/workflows/release.yaml/badge.svg)](https://github.com/finando/sso-web/actions/workflows/release.yaml)
 
 ## Description
 
