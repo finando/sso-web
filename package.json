@@ -45,7 +45,6 @@
     "commit": "cz"
   },
   "dependencies": {
-    "@finando/typescript-config": "^1.0.1",
     "core-js": "^3.31.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -58,6 +57,7 @@
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@finando/eslint-config-typescript-react": "^0.1.2",
+    "@finando/typescript-config": "^1.0.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
