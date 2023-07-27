@@ -46,7 +46,7 @@ jobs:
         run: npm ci --quiet --ignore-scripts
 
       - name: Build
-        run: npm run build:prod
+        run: npm run build
 
       - name: Install envsubst
         run: |
