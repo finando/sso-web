@@ -10,20 +10,11 @@ node_modules
 
 .gitignore
 .eslintignore
-.lintstagedrc.json
-.cz.json
-.commitlintrc.json
 .npmrc
-.releaserc.json
-.eslintrc.json
-tsconfig.json
-tsconfig.lib.json
-tsconfig.jest.json
-tsconfig.eslint.json
-tsconfig.webpack.json
 
 README.md
 LICENSE
 
-package.json
+!.*.json
+
 package-lock.json
