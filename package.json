@@ -38,7 +38,7 @@
     "prepare": "husky install",
     "start": "run-s start:webpack",
     "start:webpack": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack serve --config webpack/dev.config.ts",
-    "test": "run-s clean:coverage test:jest",
+    "test": "run-s test:coverage",
     "test:coverage": "run-s clean:coverage test:jest:coverage",
     "test:jest": "jest --passWithNoTests",
     "test:jest:coverage": "jest --passWithNoTests --coverage",
