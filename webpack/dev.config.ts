@@ -23,7 +23,7 @@ const configuration: Configuration = {
       rewrites: [{ from: /./, to: '/index.html' }],
     },
     setupMiddlewares: (middlewares, devServer) => {
-      devServer?.app?.get('/config.js', (_, response) =>
+      devServer.app?.get('/config.js', (_, response) =>
         response.status(204).send()
       );
 

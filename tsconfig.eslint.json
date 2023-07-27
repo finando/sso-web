@@ -6,6 +6,12 @@
     "./tsconfig.jest.json",
     "./tsconfig.webpack.json"
   ],
+  "compilerOptions": {
+    "lib": [
+      "ESNext",
+      "DOM"
+    ]
+  },
   "include": [
     "src",
     "test",
