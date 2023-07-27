@@ -30,8 +30,8 @@ jobs:
       - name: Audit dependencies
         run: npm audit --omit=dev --audit-level=moderate
 
-      - name: Lint project
-        run: npm run lint:project
+      - name: Lint
+        run: npm run lint
 
       - name: Test
         run: npm run test:coverage
