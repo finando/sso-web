@@ -18,7 +18,7 @@
     "npm": ">=9"
   },
   "scripts": {
-    "build": "runs-s build:prod",
+    "build": "run-s build:prod",
     "build:dev": "run-s build:webpack:dev",
     "build:prod": "run-s build:webpack:prod",
     "build:webpack:dev": "cross-env TS_NODE_PROJECT=tsconfig.webpack.json webpack --config webpack/dev.config.ts",
