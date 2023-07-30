@@ -3,13 +3,21 @@ import { resolve } from 'path';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import { type Configuration } from 'webpack';
-import { mergeWithRules, CustomizeRule } from 'webpack-merge';
+import {
+  mergeWithCustomize,
+  customizeArray,
+  CustomizeRule,
+} from 'webpack-merge';
 
 import 'webpack-dev-server';
 
 import base from './base.config';
 
-const configuration: Configuration = {
+export default mergeWithCustomize<Configuration>({
+  customizeArray: customizeArray({
+    'module.rules': CustomizeRule.Replace,
+  }),
+})(base, {
   mode: 'development',
   devtool: 'cheap-module-source-map',
   devServer: {
@@ -80,8 +88,4 @@ const configuration: Configuration = {
       },
     }),
   ],
-};
-
-export default mergeWithRules({
-  'module.rules': CustomizeRule.Replace,
-})(base, configuration);
+});

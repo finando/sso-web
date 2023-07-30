@@ -1,10 +1,9 @@
+import { type Configuration } from 'webpack';
 import { merge } from 'webpack-merge';
 
 import base from './base.config';
 
-import type { Configuration } from 'webpack';
-
-const configuration: Configuration = merge<Configuration>(base, {
+export default merge<Configuration>(base, {
   mode: 'production',
   devtool: 'source-map',
   target: ['web', 'es5'],
@@ -29,5 +28,3 @@ const configuration: Configuration = merge<Configuration>(base, {
     },
   },
 });
-
-export default configuration;

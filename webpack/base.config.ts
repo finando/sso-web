@@ -3,12 +3,12 @@ import { resolve } from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { type Configuration } from 'webpack';
 
-const configuration: Configuration = {
+export default {
   entry: {
     main: './src/entrypoints/main/index.tsx',
   },
   output: {
-    path: resolve(__dirname, '../dist'),
+    path: resolve('../dist'),
     publicPath: '/',
     clean: true,
   },
@@ -89,6 +89,4 @@ const configuration: Configuration = {
       chunks: ['main'],
     }),
   ],
-};
-
-export default configuration;
+} satisfies Configuration;
