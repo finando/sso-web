@@ -57,9 +57,58 @@
   "overrides": [
     {
       "files": [
-        "*.tsx"
+        "src/**/*"
+      ],
+      "env": {
+        "browser": true
+      },
+      "parserOptions": {
+        "project": "./tsconfig.lib.json"
+      },
+      "extends": [
+        "@finando/eslint-config-typescript-react",
+        "prettier"
+      ],
+      "plugins": [
+        "prettier"
       ],
       "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "semi": true,
+            "singleQuote": true,
+            "jsxSingleQuote": true,
+            "trailingComma": "es5"
+          }
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "parent",
+              "sibling",
+              "index",
+              "internal",
+              "object",
+              "type"
+            ],
+            "pathGroups": [
+              {
+                "pattern": "@app/**",
+                "group": "external",
+                "position": "after"
+              }
+            ],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ],
         "react/react-in-jsx-scope": "off"
       }
     },
