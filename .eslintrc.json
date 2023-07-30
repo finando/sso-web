@@ -1,6 +1,51 @@
 {
   "$schema": "https://json.schemastore.org/eslintrc",
   "root": true,
+  "extends": [
+    "@finando/eslint-config-typescript-react",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "trailingComma": "es5"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "sibling",
+          "index",
+          "internal",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@app/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  },
   "overrides": [
     {
       "files": [
@@ -12,50 +57,7 @@
       "parserOptions": {
         "project": "./tsconfig.lib.json"
       },
-      "extends": [
-        "@finando/eslint-config-typescript-react",
-        "prettier"
-      ],
-      "plugins": [
-        "prettier"
-      ],
       "rules": {
-        "prettier/prettier": [
-          "error",
-          {
-            "semi": true,
-            "singleQuote": true,
-            "jsxSingleQuote": true,
-            "trailingComma": "es5"
-          }
-        ],
-        "import/order": [
-          "error",
-          {
-            "groups": [
-              "builtin",
-              "external",
-              "parent",
-              "sibling",
-              "index",
-              "internal",
-              "object",
-              "type"
-            ],
-            "pathGroups": [
-              {
-                "pattern": "@app/**",
-                "group": "external",
-                "position": "after"
-              }
-            ],
-            "newlines-between": "always",
-            "alphabetize": {
-              "order": "asc",
-              "caseInsensitive": true
-            }
-          }
-        ],
         "react/react-in-jsx-scope": "off"
       }
     },
@@ -69,50 +71,7 @@
       "parserOptions": {
         "project": "./tsconfig.webpack.json"
       },
-      "extends": [
-        "@finando/eslint-config-typescript-react",
-        "prettier"
-      ],
-      "plugins": [
-        "prettier"
-      ],
       "rules": {
-        "prettier/prettier": [
-          "error",
-          {
-            "semi": true,
-            "singleQuote": true,
-            "jsxSingleQuote": true,
-            "trailingComma": "es5"
-          }
-        ],
-        "import/order": [
-          "error",
-          {
-            "groups": [
-              "builtin",
-              "external",
-              "parent",
-              "sibling",
-              "index",
-              "internal",
-              "object",
-              "type"
-            ],
-            "pathGroups": [
-              {
-                "pattern": "@app/**",
-                "group": "external",
-                "position": "after"
-              }
-            ],
-            "newlines-between": "always",
-            "alphabetize": {
-              "order": "asc",
-              "caseInsensitive": true
-            }
-          }
-        ],
         "import/no-extraneous-dependencies": "off"
       }
     },
@@ -128,50 +87,7 @@
       "parserOptions": {
         "project": "./tsconfig.jest.json"
       },
-      "extends": [
-        "@finando/eslint-config-typescript-react",
-        "prettier"
-      ],
-      "plugins": [
-        "prettier"
-      ],
       "rules": {
-        "prettier/prettier": [
-          "error",
-          {
-            "semi": true,
-            "singleQuote": true,
-            "jsxSingleQuote": true,
-            "trailingComma": "es5"
-          }
-        ],
-        "import/order": [
-          "error",
-          {
-            "groups": [
-              "builtin",
-              "external",
-              "parent",
-              "sibling",
-              "index",
-              "internal",
-              "object",
-              "type"
-            ],
-            "pathGroups": [
-              {
-                "pattern": "@app/**",
-                "group": "external",
-                "position": "after"
-              }
-            ],
-            "newlines-between": "always",
-            "alphabetize": {
-              "order": "asc",
-              "caseInsensitive": true
-            }
-          }
-        ],
         "import/no-extraneous-dependencies": "off"
       }
     },
