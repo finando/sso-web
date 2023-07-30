@@ -3,5 +3,8 @@
   "extends": "./tsconfig.json",
   "include": [
     "test"
+  ],
+  "files": [
+    "jest.config.ts"
   ]
 }

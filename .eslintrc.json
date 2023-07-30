@@ -73,9 +73,60 @@
     },
     {
       "files": [
+        "src/**/*.test.*",
+        "test/**/*",
         "jest.config.ts"
       ],
+      "env": {
+        "jest": true
+      },
+      "parserOptions": {
+        "project": "./tsconfig.jest.json"
+      },
+      "extends": [
+        "@finando/eslint-config-typescript-react",
+        "prettier"
+      ],
+      "plugins": [
+        "prettier"
+      ],
       "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "semi": true,
+            "singleQuote": true,
+            "jsxSingleQuote": true,
+            "trailingComma": "es5"
+          }
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "parent",
+              "sibling",
+              "index",
+              "internal",
+              "object",
+              "type"
+            ],
+            "pathGroups": [
+              {
+                "pattern": "@app/**",
+                "group": "external",
+                "position": "after"
+              }
+            ],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ],
         "import/no-extraneous-dependencies": "off"
       }
     },

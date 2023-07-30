@@ -3,7 +3,6 @@
   "extends": [
     "./tsconfig.json",
     "./tsconfig.lib.json",
-    "./tsconfig.jest.json",
     "./tsconfig.webpack.json"
   ],
   "compilerOptions": {
@@ -14,8 +13,6 @@
   },
   "include": [
     "src",
-    "test",
-    "webpack",
-    "jest.config.ts"
+    "webpack"
   ]
 }
