@@ -33,15 +33,38 @@
         ],
         "pathGroups": [
           {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "styled-components",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@finando/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
             "pattern": "@app/**",
             "group": "external",
             "position": "after"
           }
         ],
+        "pathGroupsExcludedImportTypes": [
+          "react",
+          "styled-components",
+          "@finando/*",
+          "@(app|src|project)/*"
+        ],
+        "distinctGroup": true,
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
-          "caseInsensitive": true
+          "caseInsensitive": true,
+          "orderImportKind": "desc"
         }
       }
     ]
