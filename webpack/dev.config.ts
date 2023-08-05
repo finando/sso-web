@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { join, resolve } from 'path';
 
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
@@ -20,6 +20,14 @@ export default mergeWithCustomize<Configuration>({
 })(base, {
   mode: 'development',
   devtool: 'cheap-module-source-map',
+  resolve: {
+    alias: Object.fromEntries(
+      ['react', 'react-dom', 'styled-components'].map((library) => [
+        library,
+        join(__dirname, '..', 'node_modules', library),
+      ])
+    ),
+  },
   devServer: {
     host: '0.0.0.0',
     port: 8005,
