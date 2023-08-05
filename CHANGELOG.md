@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/finando/sso-web/compare/1.0.0...1.1.0) (2023-08-05)
+
+
+### Features
+
+* add '@finando/theme' package ([276fd0a](https://github.com/finando/sso-web/commit/276fd0a78da2ffcf8b3d53f77ecdec2aeb6fd294))
+
 # 1.0.0 (2023-07-27)
 
 
