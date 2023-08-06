@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/finando/sso-web/compare/1.1.0...1.1.1) (2023-08-06)
+
+
+### Bug Fixes
+
+* use correct output path for Webpack ([63b83cb](https://github.com/finando/sso-web/commit/63b83cb8e690f3481252cb377ed7b2931178c3a8))
+
 # [1.1.0](https://github.com/finando/sso-web/compare/1.0.0...1.1.0) (2023-08-05)
 
 
