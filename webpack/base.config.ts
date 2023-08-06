@@ -8,7 +8,7 @@ export default {
     main: './src/entrypoints/main/index.tsx',
   },
   output: {
-    path: resolve('../dist'),
+    path: resolve(__dirname, '../dist'),
     publicPath: '/',
     clean: true,
   },
